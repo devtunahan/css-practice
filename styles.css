@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.checkIcon {
+    width: auto;
+    height: 30px;
+}
+
+.header-container {
+    max-width: max-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+.flex-container h2 {
+    align-self: flex-start;
+    padding-left: 40px;
+}
+
+.flex-container {
+   display: flex;
+   flex-direction: column;
+   width: 800px;
+   margin:0px auto;
+   padding-top: 20px;  
+}
+
+li {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    display:flex;
+    list-style-type: none;
+    padding: 10px
+}
+
+.todo-item {
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+li > .left-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+li > .right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.left-side > img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.right-side > img {
+    width: 25px;
+    height: 25px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+}
+
+.bottom > input {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px 0 0 16px;
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    width: 40%;
+    height: 45px;
+    border: none;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.bottom > button {
+    border-radius: 0 16px 16px 0;
+
+    width: 5%;
+    height: 45px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .flex-container {
+        width: 95%; /* Make the container take almost full width */
+        padding-top: 10px;
+        margin: auto; /* Center the container horizontally */
+        display: flex; /* Ensure flex display */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally within the container */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack logo and title vertically */
+        text-align: center; /* Center the title */
+        width: 100%; /* Ensure full width to center content correctly */
+    }
+
+    .flex-container h2 {
+        padding-left: 0; /* Adjust to remove any inherent padding */
+        text-align: center; /* Center align the titles */
+    }
+
+    li {
+        font-size: 14px; /* Adjust font size for readability */
+        margin: 0; /* Remove any default margins */
+        padding: 10px; /* Maintain padding inside li for spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .left-side > img, .right-side > img {
+        width: 20px; /* Adjust images to be slightly smaller */
+        height: 20px;
+    }
+
+    .bottom {
+        flex-direction: column; /* Stack input and button vertically */
+        padding-bottom: 20px; /* Add some padding at the bottom */
+        width: 100%; /* Use full width to center align children */
+        align-items: center; /* Align the children (input and button) to the center */
+        box-sizing: border-box; /* Ensure padding is included in total width */
+    }
+
+
+    .bottom > input
+    {
+        display:none;
+    }
+    
+    .bottom > button {
+        height: 40px; /* Adjust the height for better usability */
+        font-size: 14px; /* Adjust font size for readability */
+        border-radius: 16px; /* Adjust border radius for consistency */;
+        width: 90%; /* Make input and button take almost full width */
+        margin: 10px 0; /* Add margin for spacing between input and button */
+    }
+}
